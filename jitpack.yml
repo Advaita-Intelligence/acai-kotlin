@@ -3,4 +3,4 @@ jdk:
 before_install:
   - chmod +x gradlew
 install:
-  - ./gradlew :android:publishToMavenLocal :core:publishToMavenLocal
+  - bash gradlew :android:publishToMavenLocal :core:publishToMavenLocal

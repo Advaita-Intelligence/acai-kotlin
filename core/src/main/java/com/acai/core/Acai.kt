@@ -5,11 +5,8 @@ import com.acai.core.events.EventOptions
 import com.acai.core.events.GroupIdentifyEvent
 import com.acai.core.events.IdentifyEvent
 import com.acai.core.events.RevenueEvent
-import com.acai.core.platform.EventBridge
 import com.acai.core.plugins.AcaiDestination
 import com.acai.core.plugins.Plugin
-import com.acai.core.utilities.AnalyticsLogger
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

@@ -1,6 +1,6 @@
 jdk:
   - openjdk17
 before_install:
-  - sdk install java 17.0.0-open || true
+  - chmod +x acai-kotlin/gradlew
 install:
-  - ./gradlew :android:publishToMavenLocal :core:publishToMavenLocal
+  - cd acai-kotlin && ./gradlew :android:publishToMavenLocal :core:publishToMavenLocal

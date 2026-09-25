@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("maven-publish")
 }
 
 android {
@@ -41,17 +40,4 @@ dependencies {
 
     testImplementation(Libs.junit)
     testImplementation(Libs.mockk)
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.AdvaitaIntelligence"
-                artifactId = "android"
-                version = "1.0.0"
-            }
-        }
-    }
 }

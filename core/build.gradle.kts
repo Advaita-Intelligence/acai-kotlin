@@ -1,7 +1,6 @@
 plugins {
     id("java-library")
     id("org.jetbrains.kotlin.jvm")
-    id("maven-publish")
 }
 
 java {
@@ -18,15 +17,4 @@ dependencies {
     testImplementation(Libs.junit)
     testImplementation(Libs.mockk)
     testImplementation(Libs.coroutinesTest)
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            from(components["java"])
-            groupId = "com.github.AdvaitaIntelligence"
-            artifactId = "core"
-            version = "1.0.0"
-        }
-    }
 }

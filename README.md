@@ -6,15 +6,35 @@ A Kotlin/Android clickstream analytics SDK — inspired by the Amplitude Kotlin 
 
 ## Installation
 
-Add the dependency to your `build.gradle.kts`:
+### Step 1 — Add JitPack to your repositories
+
+In your root `settings.gradle.kts`:
 
 ```kotlin
-dependencies {
-    implementation("com.acai:analytics-android:1.0.0")
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
 }
 ```
 
-Add internet permission to `AndroidManifest.xml`:
+### Step 2 — Add the dependency
+
+In your app's `build.gradle.kts`, replace `YOUR_GITHUB_USERNAME` with the GitHub username/org that owns the repo and `TAG` with the release tag (e.g. `1.0.0`):
+
+```kotlin
+dependencies {
+    implementation("com.github.YOUR_GITHUB_USERNAME.acai-kotlin:android:TAG")
+}
+```
+
+> The `android` module already exposes `core` transitively via `api`, so you only need one dependency line.
+
+### Step 3 — Add internet permission
+
+In your `AndroidManifest.xml`:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />

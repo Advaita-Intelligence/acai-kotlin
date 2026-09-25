@@ -1,10 +1,7 @@
 package com.acai.android
 
-import android.content.Context
-import com.acai.core.Acai
 import com.acai.android.plugins.AndroidContextPlugin
 import com.acai.android.plugins.AndroidLifecyclePlugin
-import com.acai.android.utilities.DeviceInfo
 
 /**
  * Android-specific Acai SDK entry point.

@@ -42,8 +42,10 @@ class Timeline {
         return afterEnrichment
     }
 
-    fun applyClosure(closure: (Plugin) -> Unit) {
-        (before + enrichment + destination + after).forEach(closure)
+    suspend fun applyClosure(closure: suspend (Plugin) -> Unit) {
+        for (plugin in (before + enrichment + destination + after)) {
+            closure(plugin)
+        }
     }
 
     private fun applyPlugins(plugins: List<Plugin>, event: BaseEvent): BaseEvent? {

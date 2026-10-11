@@ -41,12 +41,12 @@ open class Configuration(
 
 enum class AcaiServer(val apiUrl: String, val batchUrl: String) {
     US(
-        apiUrl = "https://clickstream.acaiplatform.ai/2/httpapi",
-        batchUrl = "https://clickstream.acaiplatform.ai/batch"
+        apiUrl = "https://clickstream.acaiplatform.ai/api/collect",
+        batchUrl = "https://clickstream.acaiplatform.ai/api/collect"
     ),
     EU(
-        apiUrl = "https://eu.clickstream.acaiplatform.ai/2/httpapi",
-        batchUrl = "https://eu.clickstream.acaiplatform.ai/batch"
+        apiUrl = "https://clickstream.acaiplatform.ai/api/collect",
+        batchUrl = "https://clickstream.acaiplatform.ai/api/collect"
     );
 }
 

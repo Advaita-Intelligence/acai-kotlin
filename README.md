@@ -1,6 +1,6 @@
 # Acai Kotlin SDK
 
-A Kotlin/Android clickstream analytics SDK — inspired by the Amplitude Kotlin architecture.
+A Kotlin/Android clickstream analytics SDK for Acai.
 
 ---
 
@@ -151,7 +151,7 @@ Update the server URLs in `gradle.properties` or `Configuration`:
 Configuration(
     apiKey = "...",
     context = applicationContext,
-    serverUrl = "https://api.yourdomain.com/2/httpapi",
+    serverUrl = "https://clickstream.acaiplatform.ai/api/collect",
 )
 
 // EU data residency
